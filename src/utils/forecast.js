@@ -17,7 +17,7 @@ const forecast = (latitude, longitude, callback) => {
       callback(
         undefined,
         body.current.weather_descriptions +
-          " It is currently " +
+          ". It is currently " +
           body.current.temperature +
           " degress out. There is a " +
           body.current.precip +

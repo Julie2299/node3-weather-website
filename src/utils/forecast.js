@@ -23,7 +23,11 @@ const forecast = (latitude, longitude, callback) => {
           body.current.temperature +
           " degress out. There is a " +
           body.current.precip +
-          "% chance of rain. The wind speed is " +
+          "% chance of rain. It feels like " +
+          body.current.feelslike +
+          " degrees out. The humidity is " +
+          body.current.humidity +
+          ". The wind speed is " +
           body.current.wind_speed +
           ", and the pressure is " +
           body.current.pressure +

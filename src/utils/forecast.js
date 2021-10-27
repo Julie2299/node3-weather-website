@@ -16,12 +16,18 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        body.current.weather_descriptions +
+        body.current.weather_descriptions[0] +
+          " is observed as of " +
+          body.current.observation_time +
           ". It is currently " +
           body.current.temperature +
           " degress out. There is a " +
           body.current.precip +
-          "% chance of rain."
+          "% chance of rain. The wind speed is " +
+          body.current.wind_speed +
+          ", and the pressure is " +
+          body.current.pressure +
+          "."
       );
     }
   });
